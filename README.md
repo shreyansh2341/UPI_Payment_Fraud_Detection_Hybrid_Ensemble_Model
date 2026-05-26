@@ -1,3 +1,12 @@
+---
+title: UPI Fraud Detection API
+emoji: 🛡️
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+---
+
 # UPI Payment Fraud Detection Hybrid Ensemble Model
 
 This project aims to monitor and mitigate the risk of UPI Frauds by analyzing payments with the help of a two-path hybrid architecture. It utilizes multiple supervised, unsupervised, and deep learning models including Random Forest, XGBoost, Autoencoders, Isolation Forest, and BiLSTM with Bahdanau Attention.
