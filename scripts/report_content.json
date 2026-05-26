@@ -1,0 +1,1640 @@
+{
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "    PRECISE AND ENHANCEMENT OF UPI BASED TRANSACTION SCAM IDENTIFICATION USING HYBRID DL MODEL",
+      "style": "Normal"
+    },
+    {
+      "index": 1,
+      "text": "Submitted in partial fulfilment of the requirements of the degree of   ",
+      "style": "Normal"
+    },
+    {
+      "index": 2,
+      "text": "Bachelor of Engineering  ",
+      "style": "Normal"
+    },
+    {
+      "index": 4,
+      "text": "         Mr. SHREYANSH RAI                                                           ARMIET/AI22/RS011",
+      "style": "Normal"
+    },
+    {
+      "index": 5,
+      "text": "         Mr. MOHD. AMAAN ANSARI                                              ARMIET/AI22/AA041  ",
+      "style": "Normal"
+    },
+    {
+      "index": 6,
+      "text": "         Mr. AADITYA S. JADHAV                                                     ARMIET/AI22/JA047 ",
+      "style": "Normal"
+    },
+    {
+      "index": 7,
+      "text": "         Mr. JAY JADHAV                                                                   ARMIET/AIML23/JJ201 ",
+      "style": "Normal"
+    },
+    {
+      "index": 9,
+      "text": "Under the Guidance of  ",
+      "style": "Normal"
+    },
+    {
+      "index": 11,
+      "text": "    Prof. Ankit Sanghavi  ",
+      "style": "Heading 3"
+    },
+    {
+      "index": 13,
+      "text": " ALAMURI RATNAMALA INSTITUTE OF ENGINEERING AND  ",
+      "style": "Normal"
+    },
+    {
+      "index": 14,
+      "text": "TECHNOLOGY   ",
+      "style": "Heading 3"
+    },
+    {
+      "index": 16,
+      "text": "                Affiliated To                                     ",
+      "style": "Normal"
+    },
+    {
+      "index": 17,
+      "text": "           UNIVERSITY OF MUMBAI ",
+      "style": "Normal"
+    },
+    {
+      "index": 20,
+      "text": "                   DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING  ",
+      "style": "Normal"
+    },
+    {
+      "index": 21,
+      "text": " (Artificial Intelligence & Machine Learning)  ",
+      "style": "Normal"
+    },
+    {
+      "index": 22,
+      "text": "Academic Year \u2013 2025-2026  ",
+      "style": "Normal"
+    },
+    {
+      "index": 24,
+      "text": "CERTIFICATE   ",
+      "style": "Heading 1"
+    },
+    {
+      "index": 26,
+      "text": "This Major Project report entitled \u201cPrecise And Enhancement Of UPI Based Transaction Scam Identification Using Hybrid Deep Learning Model\u201d by Mr. Shreyansh Rai, Mr. Amaan Ansari, Mr. Aaditya Jadhav & Mr. Jay Jadhav is approved for the degree of Bachelor of Engineering in Computer Science and Engineering (AIML) for Academic year 2025 - 2026.  ",
+      "style": "Normal"
+    },
+    {
+      "index": 27,
+      "text": "                           Examiners  ",
+      "style": "Heading 2"
+    },
+    {
+      "index": 30,
+      "text": "\t1. \t  \t  ",
+      "style": "Normal"
+    },
+    {
+      "index": 34,
+      "text": "\t2. \t  \t  ",
+      "style": "Normal"
+    },
+    {
+      "index": 37,
+      "text": "  Supervisor  ",
+      "style": "Normal"
+    },
+    {
+      "index": 41,
+      "text": " \t1.     \t  ",
+      "style": "Normal"
+    },
+    {
+      "index": 44,
+      "text": "                                                                            Prof. Ankit Sanghavi",
+      "style": "Heading 3"
+    },
+    {
+      "index": 51,
+      "text": " \t          Head of Department  \t             Principal  ",
+      "style": "Normal"
+    },
+    {
+      "index": 54,
+      "text": "Date:  ",
+      "style": "Normal"
+    },
+    {
+      "index": 55,
+      "text": "Place:  ",
+      "style": "Normal"
+    },
+    {
+      "index": 57,
+      "text": "DECLARATION  ",
+      "style": "Heading 1"
+    },
+    {
+      "index": 59,
+      "text": "We declare that this written submission represents our ideas in our own words and where others' ideas or words have been included, we have adequately cited and referenced the original sources. We also declare that we have adhered to all principles of academic honesty and integrity & have not misrepresented or fabricated or falsified any idea/data/fact/source in my submission. We understand that any violation of the above will cause disciplinary action  by the Institute and can also invoke penal action from the sources which have thus not been properly cited or from whom proper permission has not been taken when needed.  ",
+      "style": "Normal"
+    },
+    {
+      "index": 70,
+      "text": "   Mr. Shreyansh Rai                                                                                    Mr. Amaan Ansari                   ",
+      "style": "Normal"
+    },
+    {
+      "index": 72,
+      "text": "ARMIET/AI22/RS011                                                                               ARMIET/AI22/AA041",
+      "style": "Normal"
+    },
+    {
+      "index": 76,
+      "text": "  Mr. Aaditya S. Jadhav                                                                                  Mr. Jay Jadhav                         ",
+      "style": "Normal"
+    },
+    {
+      "index": 78,
+      "text": "ARMIET/AI22/JA047                                                                             ARMIET/AIML23/JJ201",
+      "style": "Normal"
+    },
+    {
+      "index": 82,
+      "text": "ACKNOWLEDGEMENT  ",
+      "style": "Heading 1"
+    },
+    {
+      "index": 84,
+      "text": "We would like to take the opportunity to express our heartfelt gratitude to the people whose help and co-ordination has made this project a success. We thank Prof. Ankit Sanghavi for knowledge, guidance and co-operation in the process of making this project.",
+      "style": "Normal"
+    },
+    {
+      "index": 85,
+      "text": " We owe project success to our guide and convey our thanks to him. We would like to express our heartfelt gratitude to all the teachers and staff members of Computer Science and Engineering (AIML) for their full support. We would like to thank our principal for the conductive environment in the institution. ",
+      "style": "Normal"
+    },
+    {
+      "index": 86,
+      "text": "We are grateful to the library staff of ARMIET for the numerous books and magazines made available for handy reference and the use of the internet facility.  ",
+      "style": "Normal"
+    },
+    {
+      "index": 87,
+      "text": "Lastly, we are also indebted to all those who have indirectly contributed to making this project successful.  ",
+      "style": "Normal"
+    },
+    {
+      "index": 97,
+      "text": "-Mr. Shreyansh Rai  ",
+      "style": "Normal"
+    },
+    {
+      "index": 98,
+      "text": "-Mr. Amaan Ansari  ",
+      "style": "Normal"
+    },
+    {
+      "index": 99,
+      "text": "  -Mr. Aaditya Jadhav ",
+      "style": "Normal"
+    },
+    {
+      "index": 100,
+      "text": "-Mr. Jay Jadhav",
+      "style": "Normal"
+    },
+    {
+      "index": 107,
+      "text": "\t \t \t \t \t \tCONTENTS  ",
+      "style": "Normal"
+    },
+    {
+      "index": 111,
+      "text": "LIST OF FIGURES  ",
+      "style": "Heading 1"
+    },
+    {
+      "index": 122,
+      "text": "LIST OF TABLES  ",
+      "style": "Heading 1"
+    },
+    {
+      "index": 124,
+      "text": "LIST OF ABBREVIATION  ",
+      "style": "Heading 1"
+    },
+    {
+      "index": 128,
+      "text": "ABSTRACT  ",
+      "style": "Heading 1"
+    },
+    {
+      "index": 130,
+      "text": "     \t\t Digital payment systems have transformed financial transactions in India, with the Unified Payments Interface (UPI) becoming the most widely adopted platform due to its speed, reliability, and integration across banks and applications. However, the rapid growth of UPI transactions has also fuelled scams such as phishing attacks, fake UPI IDs, and unauthorized money requests. Traditional fraud detection methods, mainly static rule-based systems, are often inadequate for identifying evolving scam patterns. This project aims to develop an enhanced UPI scam detection framework using a Hybrid Deep Learning Model that combines multiple architectures for higher accuracy and robustness. Convolutional Neural Networks (CNNs) are applied for feature extraction, Long Short-Term Memory networks (LSTMs) for analysing sequential transaction patterns, and Autoencoders for detecting anomalies in normal behaviour. By integrating these models into a hybrid pipeline, the system improves fraud detection while reducing false positives and negatives. Data preprocessing and feature engineering are conducted on transaction logs, including attributes like amount, frequency, time, spending patterns, unusual locations, and sudden spikes in transfer values. The model is trained on labelled datasets of genuine and fraudulent transactions, with performance evaluated through accuracy, precision, recall, and F1-score metrics. Results show that the hybrid model significantly outperforms conventional machine learning approaches, offering better adaptability and detection. Additionally, emphasis is placed on model interpretability to ensure transparency and build trust among users and financial institutions, making the system not only accurate but also reliable in real-world applications.",
+      "style": "Normal"
+    },
+    {
+      "index": 134,
+      "text": "Keywords \u2013 Unified Payments Interface (UPI), fraudulent activities, Hybrid Deep Learning Model, Convolutional Neural Networks (CNNs), Long Short-Term Memory networks (LSTMs), Autoencoders, anomalies, transaction logs, accuracy, precision, recall, and F1-score metrics, machine learning.",
+      "style": "Normal"
+    },
+    {
+      "index": 157,
+      "text": "CHAPTER NO. 1",
+      "style": "Heading 2"
+    },
+    {
+      "index": 158,
+      "text": "INTRODUCTION",
+      "style": "Heading 2"
+    },
+    {
+      "index": 174,
+      "text": "CHAPTER NO : 01  ",
+      "style": "Normal"
+    },
+    {
+      "index": 175,
+      "text": "INTRODUCTION  ",
+      "style": "Normal"
+    },
+    {
+      "index": 176,
+      "text": "1.1 Introduction",
+      "style": "Normal"
+    },
+    {
+      "index": 177,
+      "text": "The rapid evolution of digital payment technologies has revolutionized financial transactions across the world. In India, the Unified Payments Interface (UPI) has emerged as one of the most widely adopted real-time payment systems, enabling seamless and instant money transfers between bank accounts. While this innovation has greatly enhanced convenience, speed, and accessibility, it has also introduced new challenges in terms of transactional frauds and security breaches. Cybercriminals are continuously developing more sophisticated scam techniques, making it increasingly difficult to identify fraudulent activities using traditional rule-based or static machine learning models. This has created an urgent need for intelligent, adaptive, and data-driven fraud detection mechanisms capable of handling dynamic transaction patterns in real time.",
+      "style": "Normal"
+    },
+    {
+      "index": 179,
+      "text": "Conventional machine learning models such as Decision Trees, Random Forests, and Logistic Regression have been widely used for fraud detection in financial systems. Although these algorithms offer interpretable results and perform well on structured data, they often fail to capture complex temporal and behavioural patterns that characterize evolving fraudulent activities. In particular, they struggle to recognize hidden correlations and sequential dependencies in UPI transactions \u2014 for example, unusual frequency, transaction timing, or abnormal balance updates. Studies from previous research, including enhanced UPI fraud detection and credit card anomaly detection using ensemble and gradient boosting techniques, have emphasized the limitations of these traditional models in adapting to unseen or evolving scam patterns.",
+      "style": "Normal"
+    },
+    {
+      "index": 181,
+      "text": "To address these challenges, researchers have recently turned to deep learning\u2013based approaches that offer greater adaptability and representation learning capabilities. Models such as Convolutional Neural Networks (CNNs) and Long Short-Term Memory (LSTM) networks have proven effective in detecting fraudulent patterns from high-dimensional and sequential transaction data. Furthermore, Autoencoders (AEs) provide an unsupervised learning mechanism to identify anomalies by reconstructing normal transaction behaviours and flagging deviations. By combining these models, hybrid frameworks have demonstrated significant improvements in fraud detection accuracy, recall rate, and overall robustness, as shown in several recent studies. Such models are capable of learning not only static transaction features but also temporal dependencies, enabling them to distinguish between legitimate and fraudulent behaviours more effectively. ",
+      "style": "Normal"
+    },
+    {
+      "index": 183,
+      "text": "In summary, this project contributes to bridging the gap between traditional fraud detection methods and advanced intelligent systems. By implementing a hybrid deep learning framework, it seeks to enhance fraud detection precision, adapt to evolving scam patterns, and provide an efficient defence mechanism for digital transactions. The outcome of this research has the potential to strengthen financial security infrastructures, inspire further academic exploration in fintech fraud analytics, and contribute toward safer digital payment environments for users worldwide.",
+      "style": "Normal"
+    },
+    {
+      "index": 185,
+      "text": "1.2 Motivation:",
+      "style": "Normal"
+    },
+    {
+      "index": 186,
+      "text": " The increasing reliance on digital transactions has made systems like the Unified Payments Interface (UPI) an essential part of modern financial infrastructure. However, with this convenience comes a growing concern about security, as fraudulent activities have become more frequent and harder to detect. Many existing fraud detection systems still depend on static rule-based or traditional machine learning models that cannot effectively adapt to new, evolving scam strategies. ",
+      "style": "Normal"
+    },
+    {
+      "index": 188,
+      "text": "This project is motivated by the need to develop a hybrid deep learning model that combines the analytical strengths of multiple algorithms to enhance detection accuracy and reliability. By integrating CNN, LSTM, and Autoencoder architectures, the proposed system can analyze complex transactional data from multiple perspectives \u2014 spatial, temporal, and behavioural. Such a model not only helps in reducing false alarms but also ensures real-time adaptability to new types of fraudulent transactions. The following key motivations drive this research:",
+      "style": "Normal"
+    },
+    {
+      "index": 190,
+      "text": "To overcome the limitations of existing static and single-model fraud detection systems.",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 191,
+      "text": "To design a system that learns evolving transaction patterns automatically.",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 192,
+      "text": "To enhance detection precision while minimizing false positives and negatives.",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 193,
+      "text": "To contribute to the development of a safer and more trustworthy digital payment ecosystem.",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 197,
+      "text": "1.3 Problem Statement: ",
+      "style": "Normal"
+    },
+    {
+      "index": 198,
+      "text": "         With the rapid digital transformation in financial systems, especially through platforms like the Unified Payments Interface (UPI), millions of transactions occur every day within seconds. While this has made payments faster and more convenient, it has also created an attractive target for cybercriminals. Fraudsters exploit security loopholes, social engineering, and technical vulnerabilities to deceive users and initiate unauthorized transactions. As the number and complexity of such scams continue to rise, it has become increasingly difficult to detect fraudulent activities using conventional approaches.",
+      "style": "Normal"
+    },
+    {
+      "index": 200,
+      "text": "       Existing fraud detection systems, which often rely on static rules or traditional machine learning algorithms, are limited in their ability to recognize new or evolving fraud patterns. These models usually depend on predefined thresholds or historical data, meaning they struggle to adapt when fraudsters change their tactics.",
+      "style": "Normal"
+    },
+    {
+      "index": 202,
+      "text": "       Therefore, there is a need for a more intelligent and adaptive solution capable of learning continuously from transaction data and detecting both known and unknown frauds. A hybrid deep learning-based system that combines multiple models\u2014such as CNN for feature extraction, LSTM for understanding transaction sequences, and Autoencoders for anomaly detection\u2014can provide a more comprehensive and accurate method of identifying scams. Such an approach can analyze complex transactional relationships, adapt to new patterns, and deliver faster, more reliable detection, thereby reducing financial losses and improving overall security in UPI transactions.",
+      "style": "Normal"
+    },
+    {
+      "index": 204,
+      "text": "1.4 Objectives: ",
+      "style": "Normal"
+    },
+    {
+      "index": 205,
+      "text": "The main objective of this project is to design and develop a hybrid deep learning model for accurate and efficient detection of fraudulent UPI transactions. The specific objectives include:",
+      "style": "Normal"
+    },
+    {
+      "index": 206,
+      "text": "To analyze and preprocess real and synthetic transaction datasets for effective fraud detection.",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 207,
+      "text": "To develop a hybrid model combining CNN, LSTM, and Autoencoder architectures for detecting complex and evolving scam patterns.",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 208,
+      "text": "To improve the accuracy of fraud detection by minimizing false positives and false negatives.",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 209,
+      "text": "To enhance the model\u2019s ability to adapt to new and unseen fraud types through continuous learning.",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 228,
+      "text": "CHAPTER NO. 2  ",
+      "style": "Normal"
+    },
+    {
+      "index": 229,
+      "text": "\tLITERATURE REVIEW \t ",
+      "style": "Normal"
+    },
+    {
+      "index": 230,
+      "text": "CHAPTER NO : 02",
+      "style": "Heading 3"
+    },
+    {
+      "index": 231,
+      "text": "LITERATURE REVIEW  ",
+      "style": "Heading 3"
+    },
+    {
+      "index": 233,
+      "text": "2.1 Literature Survey:   ",
+      "style": "Normal"
+    },
+    {
+      "index": 235,
+      "text": "K.V. Vaishnavi, M. Srija, M. Ram Sai Tejaswini et, al, With the rapid adoption of the Unified Payments Interface (UPI) for digital transactions, the associated risk of fraudulent activities has surged significantly. To combat this challenge, we propose a robust approach to detect UPI fraud by analysing critical transaction details, including the bank book name, transaction ID, and transaction amount. Our method employs three machine learning algorithms: Random Forest, K-Nearest Neighbours (KNN), and Decision Tree. The Random Forest classifier is renowned for its accuracy and resistance to overfitting, making it a strong candidate for distinguishing between legitimate and fraudulent transactions.[1]  ",
+      "style": "Normal"
+    },
+    {
+      "index": 237,
+      "text": "D Sai Kiran, Sanjay S, Saai Prasath B, Saran Nishanthan K R et, al, The way financial transactions are carried out has changed as a result of the quick expansion of digital payment platforms, especially the Unified Payments Interface (UPI) in India. With UPI, millions of users may send money immediately, making it one of the most widely used and practical payment methods. However, fraudsters have also taken notice of this growing popularity, leading to a notable surge in fraudulent activity. Due to the inability of traditional fraud detection systems, which are primarily based on static rules and two-factor authentication.[2]  ",
+      "style": "Normal"
+    },
+    {
+      "index": 239,
+      "text": "Vitthal B Kamble, Krushna Pisal, Pranav Vaidya, Sahil Gaikwad et, al, The rapid digitization of financial services has fundamentally transformed global economies, with innovations like the Unified Payments Interface (UPI) driving unprecedented convenience and inclusivity. Developed by the National Payments Corporation of India (NPCI), UPI has emerged as a benchmark for real-time, seamless financial transactions. Its widespread adoption has democratized access to digital payments, empowering millions to participate in the financial ecosystem. The increasing sophistication of fraudulent activities presents an urgent need for advanced fraud detection mechanisms that can adapt to and counter evolving threats.[3]",
+      "style": "Normal"
+    },
+    {
+      "index": 241,
+      "text": "Yash Patil, Amar Shinde, Yash Parthe, Sameer Sayyad et, al, Unified Payments Interface (UPI) has significantly transformed the landscape of digital financial transactions, offering a convenient, real-time method for transferring money between accounts. Since its inception, UPI has gained widespread acceptance due to its ease of use, low transaction costs, and integration with various financial institutions and service providers. Its ability to facilitate instant payments with minimal friction has made it a preferred choice for millions of users globally. However, the rapid expansion of UPI usage has also brought to light the vulnerabilities associated with digital payments.[4]  ",
+      "style": "Normal"
+    },
+    {
+      "index": 243,
+      "text": "Sameer Kolekar, Sourabh Panhale, Dnyanendra Rengade, Dipak Pawar et, al, A Bank is a key part of civilization. It is a financial institution which deposits money given from the public and stimulates loan. Banks play a important role in the economic stability and development of the country. It is a Centralized system which is regulated by the respective governments of the states. the present model of banking can be traced back from the 14th century. There are different types of banks which are used for different purposes like retail banking, investment banking, etc. With the rapid increase in the advancement of the technology in the past few decades now banking services become online and more convenient as offline banking services become more time consuming and proved costly while compared to online banking.[5]",
+      "style": "Normal"
+    },
+    {
+      "index": 245,
+      "text": "Fawaz Khaled Alarfaj, Iqra Malik, Hikmat Ullah Khan et, al, Credit card fraud (CCF) is a type of identity theft in which someone other than the owner makes an unlawful transaction using a credit card or account details. A credit card that has been stolen, lost, or counterfeited might result in fraud. Card-not-present fraud, or the use of your credit card number in e-commerce transactions has also become increasingly common as a result of the increase in online shopping. Increased fraud, such as CCF, has resulted from the expansion of e-banking and several online payment environments, resulting in annual losses of billions of dollars. In this era of digital payments, CCF detection has become one of the most important goals. [6] ",
+      "style": "Normal"
+    },
+    {
+      "index": 247,
+      "text": "Shabreshwari R M, Shafiya Mehrooz, Sidra Fatima, Tanmai R B et, al, The landscape of financial transactions in India has undergone a remarkable transformation with the advent of digital payment systems, among which the Unified Payments Interface (UPI) stands as a hallmark of innovation and convenience. UPI, conceived and implemented by the National Payments Corporation of India (NPCI), has democratized financial inclusion by providing a seamless, interoperable, and instant platform for transferring funds between individuals, businesses, and institutions. In recent years, there has been a significant increase in the volume of financial transactions due to the expansion of financial institutions and the popularity of web-based e- commerce.[7]  ",
+      "style": "Normal"
+    },
+    {
+      "index": 249,
+      "text": "Mr E D Pavan Kumar, S Karishma, Y Prashanthi, M Varshini, D Shafi Qur Rehaman et, al, In many areas, the Unified Payments Interface (UPI) has become the primary means of conducting financial transactions due to the quick uptake of digital payment systems. Although UPI provides quick and easy money transfers, its rising popularity has also resulted in a rise in fraud, putting consumers' and financial institutions' security at significant risk. Via phishing, social engineering, and illegal transactions, fraudsters take advantage of system flaws to cause large financial losses. An advanced fraud detection system that can proactively identify and neutralise fraudulent transactions in real time is therefore desperately needed.[8]  ",
+      "style": "Normal"
+    },
+    {
+      "index": 251,
+      "text": "Bindela.Akhila, Putluru Bhavana, Chekka Anitha, Bellary Jayasimha Raju et, al, Digital financial transactions have undergone a significant transformation thanks to the Unified Payments Interface (UPI), which offers a useful, real-time method of transferring funds across accounts. Since its launch, UPI has gained widespread acceptance due to its ease of use, low transaction fees, and compatibility with several financial institutions and service providers. It is preferred by millions of users globally due to its ability to process payments quickly and easily. The transparency and ease of use of the UPI system are advantageous to customers, but they have also made it a target for fraud. In response to these challenges, it offers a revolutionary fraud detection algorithm designed specifically for UPI transactions.[9]  ",
+      "style": "Normal"
+    },
+    {
+      "index": 253,
+      "text": "Mitta Swetha, Gattu Yashwanthi, Yalangi Divyasree et, al, The Unified Payments Interface (UPI) has emerged as a cornerstone of digital financial transactions, revolutionizing the way individuals and businesses conduct payments in India. However, with this surge in digital transactions, there has been a parallel rise in fraudulent activities, posing a significant threat to the integrity and security of the UPI system. Detecting and preventing UPI fraud has become a critical imperative for financial institutions, regulators, and businesses alike. [10]",
+      "style": "Normal"
+    },
+    {
+      "index": 255,
+      "text": "        Table 2.1: Literature Review Table",
+      "style": "Normal"
+    },
+    {
+      "index": 276,
+      "text": "CHAPTER NO. 3",
+      "style": "Normal"
+    },
+    {
+      "index": 277,
+      "text": "RESEARCH GAP",
+      "style": "Normal"
+    },
+    {
+      "index": 292,
+      "text": "                                                           CHAPTER NO: 03",
+      "style": "Normal"
+    },
+    {
+      "index": 293,
+      "text": "RESEARCH GAP",
+      "style": "Normal"
+    },
+    {
+      "index": 294,
+      "text": "3.1 Research Gap:",
+      "style": "Normal"
+    },
+    {
+      "index": 295,
+      "text": "Most existing studies on UPI fraud detection still rely on traditional machine learning models such as Decision Tree, Random Forest, or SVM, which fail to capture evolving and complex fraud patterns effectively [1][2][5][9].",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 296,
+      "text": "Many works focus only on static transactional features and ignore temporal or sequential patterns, limiting the system\u2019s ability to detect time-based or repetitive fraudulent activities [3][4][9].",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 297,
+      "text": "Unsupervised and anomaly-based methods such as Autoencoders and clustering have been explored, but they often produce high false-positive rates and require extensive tuning for real-world applicability [6][7].",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 298,
+      "text": "Hybrid and ensemble techniques have shown improvement in accuracy; however, they are computationally heavy and rarely tested for scalability or real-time fraud detection on large UPI datasets [3][7][8].",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 299,
+      "text": "Deep learning models like CNN or LSTM have been underutilized in UPI transaction analysis, despite their proven success in learning complex patterns in other financial domains [4][8][10].",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 300,
+      "text": "A comprehensive framework combining CNN, LSTM, and Autoencoder to analyze both static and dynamic transaction behaviours has not been adequately explored, creating an opportunity for a hybrid deep learning model capable of adaptive and precise UPI scam detection [1][3][6][10].",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 301,
+      "text": ". ",
+      "style": "Normal"
+    },
+    {
+      "index": 327,
+      "text": "CHAPTER NO. 4  ",
+      "style": "Normal"
+    },
+    {
+      "index": 328,
+      "text": "  RESEARCH OBJECTIVES  ",
+      "style": "Normal"
+    },
+    {
+      "index": 344,
+      "text": "                                                          CHAPTER NO: 04",
+      "style": "Normal"
+    },
+    {
+      "index": 345,
+      "text": "RESEARCH OBJECTIVES",
+      "style": "Heading 3"
+    },
+    {
+      "index": 347,
+      "text": "  4.1 Research Objectives:",
+      "style": "Normal"
+    },
+    {
+      "index": 348,
+      "text": "To develop an intelligent and adaptive hybrid deep learning model that can accurately detect fraudulent UPI transactions by learning both static and dynamic transaction patterns.",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 349,
+      "text": "To address the limitations of existing traditional and single-model systems by building a framework that can adapt to new and evolving scam patterns over time.",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 350,
+      "text": "To analyze and preprocess large-scale transactional datasets such as PaySim and credit card data, ensuring data balance, quality, and suitability for deep learning applications.",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 351,
+      "text": "To design a scalable and efficient fraud detection system capable of operating in real-time environments, supporting high transaction volumes without compromising performance.",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 386,
+      "text": "CHAPTER NO. 5",
+      "style": "Heading 3"
+    },
+    {
+      "index": 387,
+      "text": " PROPOSED METHODOLOGY",
+      "style": "Heading 3"
+    },
+    {
+      "index": 407,
+      "text": "CHAPTER NO: 05  ",
+      "style": "Normal"
+    },
+    {
+      "index": 408,
+      "text": "PROPOSED METHODOLOGY",
+      "style": "Heading 3"
+    },
+    {
+      "index": 409,
+      "text": "5.1 Proposed Methodology:",
+      "style": "Normal"
+    },
+    {
+      "index": 410,
+      "text": "The proposed system is a hybrid fraud-detection framework built for UPI transactions that combines unsupervised anomaly detection with supervised deep learning and traditional ensemble models. It is designed to run in two modes: a development/analysis mode (research, model training, and offline evaluation) and a production/real-time mode (low-latency scoring and alerting). The architecture balances precision (avoid false positives), recall (catch frauds), scalability, and explainability, and it is extensible for future enhancements such as federated learning, continual learning, and streaming analytics.",
+      "style": "Normal"
+    },
+    {
+      "index": 412,
+      "text": "Fig 5.1 System Architecture",
+      "style": "Normal"
+    },
+    {
+      "index": 413,
+      "text": "5.2 Working Model Flow Chart:",
+      "style": "Normal"
+    },
+    {
+      "index": 415,
+      "text": "Fig 5.2 Flow Chart",
+      "style": "Normal"
+    },
+    {
+      "index": 430,
+      "text": "CHAPTER NO. 6",
+      "style": "Heading 3"
+    },
+    {
+      "index": 431,
+      "text": "SYSTEM REQUIREMENTS",
+      "style": "Heading 3"
+    },
+    {
+      "index": 442,
+      "text": "CHAPTER NO: 06",
+      "style": "Heading 3"
+    },
+    {
+      "index": 443,
+      "text": "SYSTEM REQUIREMENTS",
+      "style": "Heading 3"
+    },
+    {
+      "index": 444,
+      "text": "Software Requirements:",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 445,
+      "text": "Operating System                                                               : Windows 10 / 11 (64-bit)",
+      "style": "Normal (Web)"
+    },
+    {
+      "index": 446,
+      "text": "Programming Language                                                     : Python 3.12 ",
+      "style": "Normal (Web)"
+    },
+    {
+      "index": 447,
+      "text": "IDE / Editor                                                                        : Visual Studio Code / Jupyter",
+      "style": "Normal (Web)"
+    },
+    {
+      "index": 448,
+      "text": "Data Handling                                                                    : Python Data Science Libraries ",
+      "style": "Normal (Web)"
+    },
+    {
+      "index": 449,
+      "text": "Virtual Environment                                                          : Python venv",
+      "style": "Normal (Web)"
+    },
+    {
+      "index": 450,
+      "text": "Version Control                                                                  : Git & GitHub ",
+      "style": "Normal (Web)"
+    },
+    {
+      "index": 451,
+      "text": "6.1.2 Hardware Requirements:",
+      "style": "Normal"
+    },
+    {
+      "index": 452,
+      "text": "Processor                                                                            : Intel Core i5 ",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 453,
+      "text": "RAM                                                                                   : 12 GB ",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 454,
+      "text": "Storage                                                                                : 256 GB SSD ",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 455,
+      "text": "GPU                                                                                    : NVIDIA RTX 2050",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 456,
+      "text": "6.1.3 Technology Used:",
+      "style": "Normal"
+    },
+    {
+      "index": 457,
+      "text": "Machine Learning Frameworks                                          : TensorFlow, Scikit-learn, XGBoost",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 458,
+      "text": "Data Processing & Analysis                                                : Pandas, NumPy, SciPy",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 459,
+      "text": "Visualization Libraries                                                        : Matplotlib, Seaborn, Plotly",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 460,
+      "text": "Preprocessing & Feature Engineering                                 : StandardScaler, RobustScaler",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 461,
+      "text": "Model Management                                                             : Joblib ",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 462,
+      "text": "Performance Evaluation                                                       : ROC-AUC, Precision-Recall Curve",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 463,
+      "text": "6.1.4 Dataset Requirements",
+      "style": "Normal"
+    },
+    {
+      "index": 464,
+      "text": "PaySim Dataset \u2013 Simulated mobile money transaction data for fraud detection, used for UPI transaction analysis.",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 465,
+      "text": "Credit Card Fraud Detection Dataset \u2013 Benchmark dataset containing anonymized card transaction records for comparative fraud analysis.",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 477,
+      "text": "CHAPTER NO: 7",
+      "style": "Heading 3"
+    },
+    {
+      "index": 478,
+      "text": " SYSTEM DESIGN",
+      "style": "Normal"
+    },
+    {
+      "index": 490,
+      "text": "CHAPTER NO: 7",
+      "style": "Heading 3"
+    },
+    {
+      "index": 491,
+      "text": "SYSTEM DESIGN",
+      "style": "Heading 3"
+    },
+    {
+      "index": 492,
+      "text": "7.1 UML Diagram:",
+      "style": "Heading 3"
+    },
+    {
+      "index": 493,
+      "text": "The UML flowchart illustrates the workflow of the Hybrid Deep Learning\u2013Based UPI Fraud Detection System. It begins with the collection of UPI transaction data, which is then preprocessed to clean and extract key features such as transaction amount, balance difference, and time-based variables. The processed data is analyzed in two main paths \u2014 the Autoencoder path, which detects anomalies based on reconstruction errors, and the CNN\u2013LSTM path, which identifies behavioural and sequential fraud patterns.",
+      "style": "Normal"
+    },
+    {
+      "index": 495,
+      "text": "Fig.7.1 UML Diagram",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 496,
+      "text": " DFD Level 0 \u2013 Context Diagram",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 497,
+      "text": "The Level 0 DFD represents the overall system as a single process interacting with external entities. It shows how UPI transaction data from users and banks enters the fraud detection system, where it is analyzed to determine whether a transaction is legitimate or fraudulent.",
+      "style": "Normal"
+    },
+    {
+      "index": 500,
+      "text": "Fig. 7.2 DFD Level 0",
+      "style": "Normal"
+    },
+    {
+      "index": 502,
+      "text": "This level highlights the high-level data flow between external users, the fraud detection system, and data storage components.",
+      "style": "Normal"
+    },
+    {
+      "index": 503,
+      "text": " DFD Level 1 \u2013 System Breakdown",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 504,
+      "text": "The Level 1 DFD expands the main process into key subsystems, including data collection, preprocessing, model analysis, and decision-making. Transaction data is first cleaned and feature-engineered, then passed simultaneously to the Autoencoder and CNN\u2013LSTM models for anomaly detection and sequence analysis.",
+      "style": "Normal"
+    },
+    {
+      "index": 507,
+      "text": "Fig. 7.3 DFD Level 1",
+      "style": "Normal"
+    },
+    {
+      "index": 508,
+      "text": "Results are stored in the database, and flagged transactions are sent to the alert system for action.",
+      "style": "Normal"
+    },
+    {
+      "index": 510,
+      "text": " DFD Level 2 \u2013 Detailed Process Flow",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 511,
+      "text": "The Level 2 DFD provides a detailed view of data handling and processing inside each subsystem. It shows individual steps such as data validation, feature scaling, sequence generation, model training, fraud score computation, and result storage.",
+      "style": "Normal"
+    },
+    {
+      "index": 514,
+      "text": "Fig. 7.4 DFD Level 2",
+      "style": "Normal"
+    },
+    {
+      "index": 515,
+      "text": "The diagram also represents feedback loops for retraining and model updates, ensuring that the system continuously learns from new transaction data to maintain high fraud detection accuracy.",
+      "style": "Normal"
+    },
+    {
+      "index": 517,
+      "text": "Fig 7.5 Use Case",
+      "style": "Normal"
+    },
+    {
+      "index": 518,
+      "text": "Explanation of Use Case Diagram:",
+      "style": "Normal"
+    },
+    {
+      "index": 519,
+      "text": "UPI User performs a transaction \u2192 The fraud detection system checks it for suspicious activity.",
+      "style": "Normal"
+    },
+    {
+      "index": 520,
+      "text": "Bank/Financial Institution monitors transactions \u2192 Keeps oversight of ongoing user activities.",
+      "style": "Normal"
+    },
+    {
+      "index": 521,
+      "text": "Fraud Detection System detects fraud \u2192 Identifies abnormal or suspicious transaction behaviour.",
+      "style": "Normal"
+    },
+    {
+      "index": 522,
+      "text": "System alerts user/bank \u2192 Immediate notification is sent if a fraud is detected.",
+      "style": "Normal"
+    },
+    {
+      "index": 523,
+      "text": "Update model with new fraud patterns \u2192 The system learns from new scams to stay effective in the future.",
+      "style": "Normal"
+    },
+    {
+      "index": 543,
+      "text": "CHAPTER NO. 8  ",
+      "style": "Heading 3"
+    },
+    {
+      "index": 544,
+      "text": "IMPLEMENTATION AND RESULT  ",
+      "style": "Heading 3"
+    },
+    {
+      "index": 546,
+      "text": "CHAPTER NO : 08 ",
+      "style": "Normal"
+    },
+    {
+      "index": 547,
+      "text": "IMPLEMENTATION AND RESULTS",
+      "style": "Normal"
+    },
+    {
+      "index": 548,
+      "text": "8.1 Performance Analysis:",
+      "style": "Normal"
+    },
+    {
+      "index": 549,
+      "text": "Model Performance Metrics Comparison:",
+      "style": "Normal"
+    },
+    {
+      "index": 550,
+      "text": "Description: This bar chart compares the Random Forest (RF+AE) and XGBoost (XGB+AE) hybrid models across five major performance metrics: Accuracy, Precision, Recall, F1-Score, and ROC-AUC. The visualization demonstrates that XGB+AE consistently outperforms RF+AE in all key metrics, indicating a stronger capability in detecting fraudulent UPI transactions.",
+      "style": "Normal"
+    },
+    {
+      "index": 552,
+      "text": "Fig 8.1 Model Performance Metrics Comparison",
+      "style": "Normal"
+    },
+    {
+      "index": 554,
+      "text": "Model Confusion Matrices:",
+      "style": "Normal"
+    },
+    {
+      "index": 555,
+      "text": "Description: The confusion matrices illustrate how accurately each model classifies fraudulent and legitimate transactions. The XGB+AE model shows a higher count of correctly identified fraudulent samples (True Positives) and fewer missed frauds (False Negatives) compared to the RF+AE model.",
+      "style": "Normal"
+    },
+    {
+      "index": 556,
+      "text": "Fig 8.2 Model Confusion Matrices",
+      "style": "Normal"
+    },
+    {
+      "index": 558,
+      "text": "Receiver Operating Characteristic (ROC) Curve Comparison:",
+      "style": "Normal"
+    },
+    {
+      "index": 559,
+      "text": "Description: The ROC curve compares the diagnostic performance of both hybrid models by plotting the True Positive Rate against the False Positive Rate. The Area Under the Curve (AUC) scores indicate that both models perform well, with XGB+AE achieving a near-perfect AUC.",
+      "style": "Normal"
+    },
+    {
+      "index": 561,
+      "text": "    Fig 8.3 (ROC) Curve Comparison",
+      "style": "Normal"
+    },
+    {
+      "index": 564,
+      "text": "CONCLUSION  ",
+      "style": "Heading 4"
+    },
+    {
+      "index": 566,
+      "text": "The proposed project, Precise and Enhanced UPI-Based Transaction Scam Identification Using a Hybrid Deep Learning Model, focuses on strengthening the security of India\u2019s rapidly growing digital payment ecosystem. As UPI has become the preferred mode for instant financial transactions, the need for a smart and adaptive fraud detection system is greater than ever. Traditional rule-based or basic machine learning methods, though useful for detecting simple anomalies, often fail against the complex and evolving nature of modern scams. Our approach integrates hybrid deep learning techniques\u2014CNNs for feature extraction, RNNs and LSTMs for sequential analysis\u2014to create a model that is more robust, accurate, and capable of detecting fraudulent transactions in real time. This reduces both false positives and false negatives, ensuring safe and smooth transaction experiences for users. The model\u2019s design emphasizes adaptability and scalability, allowing it to continuously learn from new data and handle the high volume of UPI transactions across banks and apps. By analyzing user behavior and transaction patterns intelligently, the system enables financial institutions to take preventive actions before fraud occurs. This project not only improves detection accuracy but also builds trust in digital payments. It lays the foundation for future enhancements such as blockchain and federated learning, making UPI transactions more secure, transparent, and reliable in the long run.",
+      "style": "Normal (Web)"
+    },
+    {
+      "index": 579,
+      "text": "REFERENCES  ",
+      "style": "Heading 4"
+    },
+    {
+      "index": 581,
+      "text": "K.V. Vaishnavi, M. Srija, M. Ram Sai Tejaswini et, al. (2025): With the rapid adoption of the Unified Payments Interface (UPI) for digital transactions, the associated risk of fraudulent activities has surged significantly.[1]",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 582,
+      "text": "D Sai Kiran, Sanjay S, Saai Prasath B, Saran Nishanthan K R et, al.(2025): The way financial transactions are carried out has changed as a result of the quick expansion of digital payment platforms, especially the Unified Payments Interface (UPI) in India.[2]",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 583,
+      "text": "Vitthal B Kamble, Krushna Pisal, Pranav Vaidya, Sahil Gaikwad et, al. (2025): The rapid digitization of financial services has fundamentally transformed global economies, with innovations like the Unified Payments Interface (UPI) [3]",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 584,
+      "text": "Yash Patil, Amar Shinde, Yash Parthe, Sameer Sayyad et, al. (2024): Unified Payments Interface (UPI) has significantly transformed the landscape of digital financial transactions, offering a convenient, real-time method for transferring money between accounts.[4] ",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 585,
+      "text": " Sameer Kolekar, Sourabh Panhale, Dnyanendra Rengade, Dipak Pawar et, al. (2024): A Bank is a key part of civilization. It is a financial institution which deposits money given from the public and stimulates loan.[5] ",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 586,
+      "text": "Fawaz Khaled Alarfaj, Iqra Malik, Hikmat Ullah Khan et, al. (2022): Credit card fraud (CCF) is a type of identity theft in which someone other than the owner makes an unlawful transaction using a creditcard or account details.[6] ",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 587,
+      "text": "Shabreshwari R M, Shafiya Mehrooz, Sidra Fatima, Tanmai R B et, al. (2024): The landscape of financial transactions in India has undergone a remarkable transformation with the advent of digital payment systems, among which the Unified Payments Interface (UPI) stands as a hallmark of innovation and convenience.[7]",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 588,
+      "text": "Mr E D Pavan Kumar, S Karishma, Y Prashanthi, M Varshini, D Shafi Qur Rehaman et, al. (2025): In many areas, the Unified Payments Interface (UPI) has become the primary means of conducting financial transactions due to the quick uptake of digital payment systems. [8]",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 589,
+      "text": "Bindela.Akhila, Putluru Bhavana, Chekka Anitha, Bellary Jayasimha Raju et, al.(2025): Digital financial transactions have undergone a significant transformation thanks to the Unified Payments Interface (UPI), which offers a useful, real-time method of transferring funds across accounts.[9]",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 590,
+      "text": "Mitta Swetha, Gattu Yashwanthi, Yalangi Divyasree et, al.(2024): The Unified Payments Interface (UPI) has emerged as a cornerstone of digital financial transactions, revolutionizing the way individuals and businesses conduct payments in India.[10]",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 591,
+      "text": "Mohit Vasant, Swati Ganesan, Ganapathy Kumar (2025): The global economy, daily life, and company operations are all affected by financial crimes, as significant amounts of money are lost daily to fraudsters on e-commerce platforms like Alibaba, AliExpress, Jumia, and Amazon. [11] ",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 592,
+      "text": "Vitthal B Kamble1, Krushna Pisal, Pranav Vaidya, Sahil Gaikwad (2025): The rapid digitization of financial services has fundamentally transformed global economies, with innovations like the Unified Payments Interface (UPI) driving unprecedented convenience and inclusivity. [12] ",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 593,
+      "text": "Madiha Jabeen, Shabana Ramzan , Ali Raza, Seung Won Lee, Norma Latif Fitriyani, Muhammad Syafrudin (2025): The Unified Payments Interface (UPI) has emerged as a cornerstone of digital financial transactions, revolutionizing the way individuals and businesses conduct payments in India.[13] ",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 594,
+      "text": "Shubham Singh, Harshita Nimje, Ajinkya Fulpatile, Rahul Neware.(2024): There have always been people searching for new ways to gain illegal access to another person's financial information since the beginning of the digital process. [14] ",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 595,
+      "text": "Mangali Vijaya Sree, Panyam Bhuvaneshwari, Karne Nandini, Koppula Ratna Phoebe Amulya, Palla Swetha, B. Chandrakala (2024): The traditional fraud detection systems, which basically utilize static rule engines or correlation-driven machine learning models, are not able to detect sophisticated patterns of frauds in a real time manner.[15] ",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 596,
+      "text": "Fahad Almalki, Mehedi Masud (2025): As financial institutions increasingly rely on machine learning models to detect fraud, concerns about the explainability of these models have become more evident. [16] ",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 597,
+      "text": "S Karishma, Y Prashanthi, M Varshini, D Shafi Qur Rehaman (2014): The model minimises false positives while ensuring high accuracy in detecting fraudulent patterns through the use of feature engineering and data preparation approaches.[17] ",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 598,
+      "text": "Miss. Sayalee S. Bodade, Prof. P.P. Pawade (2014): The increasing popularity of digital payment systems like UPI (Unified Payments Interface), there is a growing concern about fraud in these platforms.[18] ",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 599,
+      "text": "Vitthal B Kamble, Krushna Pisal, Pranav Vaidya, Sahil Gaikwad (2025): This layered approach enables not only the detection of known fraud schemes but also the identification of novel threats, making it particularly suited for dynamic digital payment ecosystems.[19] ",
+      "style": "List Paragraph"
+    },
+    {
+      "index": 600,
+      "text": "K.DivyaTeja1, K.V.Vaishnavi, M.Srija, M.RamSaiTejaswini (2025): The Random Forest classifier is renowned for its accuracy and resistance to overfitting, making it a strong candidate for distinguishing between legitimate and fraudulent transactions.  [20] ",
+      "style": "List Paragraph"
+    }
+  ],
+  "tables": [
+    {
+      "index": 0,
+      "data": [
+        [
+          "CH. \nNO",
+          "TOPIC",
+          "PAGE NO."
+        ],
+        [
+          "",
+          "LIST OF FIGURES",
+          "I"
+        ],
+        [
+          "",
+          "LIST OF TABLES",
+          "II"
+        ],
+        [
+          "",
+          "LIST OF ABBREVATION",
+          "III"
+        ],
+        [
+          "",
+          "ABSTRACT",
+          "IV"
+        ],
+        [
+          "1",
+          "INTRODUCTION",
+          "1"
+        ],
+        [
+          "1",
+          "1.1 Introduction",
+          "2"
+        ],
+        [
+          "1",
+          "1.2 Motivation",
+          "3"
+        ],
+        [
+          "1",
+          "1.3 Problem Statement",
+          "4"
+        ],
+        [
+          "1",
+          "1.4 Objectives",
+          "4"
+        ],
+        [
+          "2",
+          "LITERATURE REVIEW",
+          "5"
+        ],
+        [
+          "3",
+          "RESEARCH GAP",
+          "14"
+        ],
+        [
+          "4",
+          "RESEACH OBJECTIVES",
+          "16"
+        ],
+        [
+          "5",
+          "PROPOSED METHODOLOGY",
+          "18"
+        ],
+        [
+          "5",
+          "5.1 System Architecture",
+          "19"
+        ],
+        [
+          "6",
+          "SYSTEM REQUIREMENTS",
+          "24"
+        ],
+        [
+          "6",
+          "6.1 Software Requirements",
+          "25"
+        ],
+        [
+          "6",
+          "6.2 Hardware Requirements",
+          "25"
+        ],
+        [
+          "6",
+          "6.3 Technology Used",
+          "25"
+        ],
+        [
+          "6",
+          "6.4 Dataset Requirements",
+          "25"
+        ],
+        [
+          "7",
+          "SYSTEM DESIGN",
+          "23"
+        ],
+        [
+          "7",
+          "7.1 UML Diagram",
+          "24"
+        ],
+        [
+          "7",
+          "7.2 DFD Level 0",
+          "25"
+        ],
+        [
+          "7",
+          "7.3 DFD Level 1",
+          "26"
+        ],
+        [
+          "7",
+          "7.4 DFD Level 2",
+          "27"
+        ],
+        [
+          "7",
+          "7.5 Use Case Diagram",
+          "28"
+        ],
+        [
+          "8",
+          "IMPLEMENTATION AND RESULT",
+          "29"
+        ],
+        [
+          "8",
+          "8.1 Performance Analysis",
+          "30"
+        ],
+        [
+          "9",
+          "CONCLUSION",
+          "32"
+        ],
+        [
+          "",
+          "REFERENCES",
+          "33"
+        ]
+      ]
+    },
+    {
+      "index": 1,
+      "data": [
+        [
+          "Sr. No.",
+          "Figure Name",
+          "Fig. No.",
+          "Page No."
+        ],
+        [
+          "1",
+          "System Architecture",
+          "5.1",
+          "27"
+        ],
+        [
+          "2",
+          "Flow Chart",
+          "5.2",
+          "29"
+        ],
+        [
+          "3",
+          "UML Diagram",
+          "6.1",
+          "31"
+        ],
+        [
+          "4",
+          "DFD Level 0",
+          "6.2",
+          "32"
+        ],
+        [
+          "5",
+          "DFD Level 1",
+          "6.3",
+          "33"
+        ],
+        [
+          "6",
+          "DFD Level 2",
+          "6.4",
+          "34"
+        ],
+        [
+          "7",
+          "Use Case",
+          "6.5",
+          "35"
+        ],
+        [
+          "8",
+          "Model Performance Metrics Comparison",
+          "8.1",
+          "40"
+        ],
+        [
+          "9",
+          "Model Confusion Matrices",
+          "8.2",
+          "41"
+        ],
+        [
+          "10",
+          "(ROC) Curve Comparison",
+          "8.3",
+          "41"
+        ]
+      ]
+    },
+    {
+      "index": 2,
+      "data": [
+        [
+          "Sr no.",
+          "Table no.",
+          "Table Name",
+          "Page no."
+        ],
+        [
+          "1",
+          "2.1",
+          "Literature Survey",
+          "13"
+        ]
+      ]
+    },
+    {
+      "index": 3,
+      "data": [
+        [
+          "Sr. No.",
+          "Abbreviation",
+          "Definition"
+        ],
+        [
+          "1",
+          "UPI",
+          "Unified Payment Interface"
+        ],
+        [
+          "2",
+          "CCF",
+          "Credit Card Fraud"
+        ],
+        [
+          "3",
+          "KNN",
+          "K- Nearest-Neighbour"
+        ],
+        [
+          "4",
+          "RF",
+          "Random Forest"
+        ],
+        [
+          "5",
+          "SVM",
+          "Support Vector Machine"
+        ],
+        [
+          "6",
+          "CNNs",
+          "Convolutional Neural Networks"
+        ],
+        [
+          "7",
+          "RNNs",
+          "Recurrent Neural Networks"
+        ],
+        [
+          "8",
+          "AUC",
+          "Area Under Curve"
+        ],
+        [
+          "9",
+          "HMM",
+          "Hidden Markov Model"
+        ],
+        [
+          "10",
+          "LSTM",
+          "Long Short Term Memory"
+        ],
+        [
+          "11",
+          "NPCI",
+          "National Payments Corporation of India"
+        ],
+        [
+          "12",
+          "EDA",
+          "Exploratory Data Analysis"
+        ],
+        [
+          "13",
+          "OTP",
+          "One Time Password"
+        ]
+      ]
+    },
+    {
+      "index": 4,
+      "data": [
+        [
+          "Ref.  \nNo.",
+          "Author  \nName",
+          "Topic Name",
+          "Journal and  \nPublications",
+          "Working  \nAnd Purpose",
+          "Algorithm and\nTechnology",
+          "Limitations"
+        ],
+        [
+          "1",
+          "K.V. Vaishnavi, M. Srija,\n M. RamSai\nTejaswini",
+          "UPI Fraud Detection using Machine Learning",
+          "IJISEA - An International Peer- Reviewed Journal 2025",
+          "This multi-algorithm approach not only helps in preventing fraudulent transactions but also ensures that legitimate transactions are processed smoothly",
+          "Machine learning,\nRandom Forest, K-Nearest Neighbours (KNN), and Decision Tree",
+          "KNN\nCan be slow with large data because it compares the query with every data point."
+        ],
+        [
+          "2",
+          "D Sai Kiran, Sanjay S, Saai Prasath B, Saran Nishanthan K R",
+          "Enhanced UPI Fraud Detection.",
+          "International Journal of Information Technology, Research and Applications (IJITRA) 2025.",
+          "This new system will employ a data-driven methodology, analysing past transaction data and user behaviour patterns to detect fraud",
+          "Operating system: Windows 10,\n IDE: anaconda navigator \nCoding Language: python",
+          "Static Rule-Based Approach, High Rate of False Positives,\nInability to Analyse User Behaviour"
+        ]
+      ]
+    },
+    {
+      "index": 5,
+      "data": [
+        [
+          "3",
+          "Vitthal B Kamble, Krushna Pisal, Pranav Vaidya, Sahil Gaikwad",
+          "Enhancing UPI Fraud Detection: A Machine Learning Approach Using Stacked Generalization",
+          "International Journal of Multidisciplinary on Science and Management (2025)",
+          "The combining ensemble learning techniques with transaction-level and network-based analytics to enhance fraud detection capabilities",
+          "Random Forest Method, Random Forest Method, SVM Support Vector Machine, Decision Tree",
+          "Despite their success, traditional fraud detection systems face limitations. Rule-based systems lack adaptability to emerging fraud patterns"
+        ],
+        [
+          "4",
+          "Yash Patil, Amar Shinde, Yash Parthe, Sameer Sayyad",
+          "UPI Fraud Detection Using Machine Learning",
+          ".  International Research Journal of Modernization in Engineering Technology and Science (2024)",
+          "Experimental results demonstrate a significant improvement in fraud detection rates compared to traditional methods,",
+          "ML models, \nSupport Vector Machine (SVM)",
+          "SVM requires a long training period; as a result, it is not practical for large datasets."
+        ],
+        [
+          "5",
+          "Sameer Kolekar, Sourabh Panhale, Dnyanendra Rengade, Dipak Pawar",
+          "UPI fraud Detection Using Machine Learning",
+          "International Journal of Scientific Research in Engineering and Management (IJSREM) 2024",
+          "In this system, we present a hidden Markov model (Auto Encoder, Local Outlier Factor, Kmeans Clustering) which does not required fraud signatures and yet is able to detect frauds by considering a cardholder's spending habit.",
+          "Auto Encoder, Local Outlier Factor, Kmeans Clustering",
+          "Technical obstacles, financial constraints and security concerns are all challenges. WAP proved to be too expensive and slow to satisfy the expectations of the consumer."
+        ],
+        [
+          "6",
+          "Fawaz Khaled Alarfaj, Iqra Malik, Hikmat Ullah Khan",
+          "Credit Card Fraud Detection Using State-of-the-Art Machine Learning and Deep Learning Algorithms",
+          "IEEE Access open access journal.",
+          "The main focus has been to apply the recent development of deep learning algorithms for this purpose",
+          "Extreme Learning Method, Decision Tree, Random Forest, Support Vector Machine, Logistic Regression and XG Boost",
+          "The system is not fully capable of real-time fraud detection due to computational delays and resource constraints."
+        ],
+        [
+          "7",
+          "Shabreshwari R M, Shafiya Mehrooz, Sidra Fatima, Tanmai R B",
+          "UPI Fraud Detection Using Machine Learning",
+          "International Journal of Advances in Engineering and Management (IJAEM) 2024",
+          "To gather and pre-process a diverse UPI transaction dataset for fraud detection",
+          "Machine learning algorithms (Random Forest, XGBoost classifier, Logistic regression, Decision Tree, GBM)",
+          "Limited access to real-world datasets due to privacy issues affects the model\u2019s training and performance accuracy."
+        ],
+        [
+          "8",
+          "Mr E D Pavan Kumar, S Karishma, Y Prashanthi, M Varshini, D Shafi Qur Rehaman",
+          "UPI Fraud Detection Using Machine Learning",
+          "Journal of Emerging Technologies and Innovative research. (JETIR) 2025",
+          "The goal of this project is to create a machine learning-based UPI fraud detection system that analyses transactional data to identify suspicious activity and anomalies.",
+          "Random Forest and XGBoost algorithms",
+          "Fraud patterns keep changing over time, so the model must be updated regularly to maintain accuracy."
+        ],
+        [
+          "9.",
+          "Bindela.Akhila, Putluru Bhavana, Chekka Anitha, Bellary Jayasimha Raju",
+          "UPI Fraud Detection Using Machine Learning",
+          "International Journal for Multidisciplinary Research (IJFMR) 2025",
+          "This project aims to offer a robust and adaptable UPI Fraud Detection system to stop fraudulent activities and safeguard users' financial assets.",
+          "Machine learning (ML) techniques, Hidden Markov Model (HMM)",
+          "UPI transactions are mostly genuine, and only a small portion are fraudulent. This imbalance makes it difficult for the model to learn and accurately identify frauds"
+        ],
+        [
+          "10",
+          "Mitta Swetha, Gattu Yashwanthi, Yalangi Divyasree",
+          "UPI Fraud Detection Using Machine Learning",
+          "Journal of Computational Analysis and Applications (2024)",
+          "The system offers real-time monitoring capabilities, enabling immediate intervention in potentially fraudulent transactions",
+          "Machine learning (ML) techniques. Random Forest and Gradient Boosting",
+          "The model\u2019s predictions may not always be explainable, making it hard for users or banks to fully trust automated decisions."
+        ]
+      ]
+    }
+  ],
+  "headings": [
+    {
+      "index": 11,
+      "text": "    Prof. Ankit Sanghavi  ",
+      "level": "Heading 3"
+    },
+    {
+      "index": 14,
+      "text": "TECHNOLOGY   ",
+      "level": "Heading 3"
+    },
+    {
+      "index": 24,
+      "text": "CERTIFICATE   ",
+      "level": "Heading 1"
+    },
+    {
+      "index": 27,
+      "text": "                           Examiners  ",
+      "level": "Heading 2"
+    },
+    {
+      "index": 44,
+      "text": "                                                                            Prof. Ankit Sanghavi",
+      "level": "Heading 3"
+    },
+    {
+      "index": 57,
+      "text": "DECLARATION  ",
+      "level": "Heading 1"
+    },
+    {
+      "index": 82,
+      "text": "ACKNOWLEDGEMENT  ",
+      "level": "Heading 1"
+    },
+    {
+      "index": 111,
+      "text": "LIST OF FIGURES  ",
+      "level": "Heading 1"
+    },
+    {
+      "index": 122,
+      "text": "LIST OF TABLES  ",
+      "level": "Heading 1"
+    },
+    {
+      "index": 124,
+      "text": "LIST OF ABBREVIATION  ",
+      "level": "Heading 1"
+    },
+    {
+      "index": 128,
+      "text": "ABSTRACT  ",
+      "level": "Heading 1"
+    },
+    {
+      "index": 157,
+      "text": "CHAPTER NO. 1",
+      "level": "Heading 2"
+    },
+    {
+      "index": 158,
+      "text": "INTRODUCTION",
+      "level": "Heading 2"
+    },
+    {
+      "index": 230,
+      "text": "CHAPTER NO : 02",
+      "level": "Heading 3"
+    },
+    {
+      "index": 231,
+      "text": "LITERATURE REVIEW  ",
+      "level": "Heading 3"
+    },
+    {
+      "index": 345,
+      "text": "RESEARCH OBJECTIVES",
+      "level": "Heading 3"
+    },
+    {
+      "index": 386,
+      "text": "CHAPTER NO. 5",
+      "level": "Heading 3"
+    },
+    {
+      "index": 387,
+      "text": " PROPOSED METHODOLOGY",
+      "level": "Heading 3"
+    },
+    {
+      "index": 408,
+      "text": "PROPOSED METHODOLOGY",
+      "level": "Heading 3"
+    },
+    {
+      "index": 430,
+      "text": "CHAPTER NO. 6",
+      "level": "Heading 3"
+    },
+    {
+      "index": 431,
+      "text": "SYSTEM REQUIREMENTS",
+      "level": "Heading 3"
+    },
+    {
+      "index": 442,
+      "text": "CHAPTER NO: 06",
+      "level": "Heading 3"
+    },
+    {
+      "index": 443,
+      "text": "SYSTEM REQUIREMENTS",
+      "level": "Heading 3"
+    },
+    {
+      "index": 477,
+      "text": "CHAPTER NO: 7",
+      "level": "Heading 3"
+    },
+    {
+      "index": 490,
+      "text": "CHAPTER NO: 7",
+      "level": "Heading 3"
+    },
+    {
+      "index": 491,
+      "text": "SYSTEM DESIGN",
+      "level": "Heading 3"
+    },
+    {
+      "index": 492,
+      "text": "7.1 UML Diagram:",
+      "level": "Heading 3"
+    },
+    {
+      "index": 543,
+      "text": "CHAPTER NO. 8  ",
+      "level": "Heading 3"
+    },
+    {
+      "index": 544,
+      "text": "IMPLEMENTATION AND RESULT  ",
+      "level": "Heading 3"
+    },
+    {
+      "index": 564,
+      "text": "CONCLUSION  ",
+      "level": "Heading 4"
+    },
+    {
+      "index": 579,
+      "text": "REFERENCES  ",
+      "level": "Heading 4"
+    }
+  ]
+}
