@@ -13,7 +13,7 @@ import numpy as np
 
 from styles import get_plotly_theme
 
-API_BASE = "http://127.0.0.1:8003"
+API_BASE = "https://shreyansh2341-netra-advance-ai-to-detect-and-block-upi-frauds.hf.space"
 
 
 # ══════════════════════════════════
