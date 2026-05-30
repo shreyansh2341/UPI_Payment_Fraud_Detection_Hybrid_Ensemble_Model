@@ -54,8 +54,8 @@ def render_scan():
     with col_config1:
         dataset_type = st.selectbox(
             "🎯 Dataset Logic",
-            ["paysim", "creditcard"],
-            help="Determines preprocessing and model stack. PaySim uses V5 hybrid, CreditCard uses V3 ensemble.",
+            ["paysim"],
+            help="Determines preprocessing and model stack. PaySim uses V5 hybrid engine.",
         )
 
     with col_config2:
@@ -73,52 +73,28 @@ def render_scan():
 <div style="
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
+    gap: 16px;
     margin-bottom: 24px;
 ">
-    <div style="
-        background: rgba(239, 68, 68, 0.08);
-        border: 1px solid rgba(239, 68, 68, 0.15);
-        border-radius: 10px;
-        padding: 12px 16px;
-        text-align: center;
-    ">
-        <div style="font-size: 1.2rem; margin-bottom: 4px;">📡</div>
-        <div style="color: #fca5a5; font-weight: 600; font-size: 0.8rem;">XGBoost + RF</div>
-        <div style="color: #64748b; font-size: 0.7rem;">Known Fraud</div>
+    <div class="model-card-3d model-card-danger">
+        <div style="font-size: 1.6rem; margin-bottom: 8px;">📡</div>
+        <div style="color: #fca5a5; font-weight: 700; font-size: 0.85rem;">XGBoost + RF</div>
+        <div style="color: #64748b; font-size: 0.75rem;">Known Fraud</div>
     </div>
-    <div style="
-        background: rgba(249, 115, 22, 0.08);
-        border: 1px solid rgba(249, 115, 22, 0.15);
-        border-radius: 10px;
-        padding: 12px 16px;
-        text-align: center;
-    ">
-        <div style="font-size: 1.2rem; margin-bottom: 4px;">🧠</div>
-        <div style="color: #fdba74; font-weight: 600; font-size: 0.8rem;">BiLSTM + Attention</div>
-        <div style="color: #64748b; font-size: 0.7rem;">Novel Fraud</div>
+    <div class="model-card-3d model-card-warning">
+        <div style="font-size: 1.6rem; margin-bottom: 8px;">🧠</div>
+        <div style="color: #fdba74; font-weight: 700; font-size: 0.85rem;">BiLSTM + Attention</div>
+        <div style="color: #64748b; font-size: 0.75rem;">Novel Fraud</div>
     </div>
-    <div style="
-        background: rgba(245, 158, 11, 0.08);
-        border: 1px solid rgba(245, 158, 11, 0.15);
-        border-radius: 10px;
-        padding: 12px 16px;
-        text-align: center;
-    ">
-        <div style="font-size: 1.2rem; margin-bottom: 4px;">🔬</div>
-        <div style="color: #fcd34d; font-weight: 600; font-size: 0.8rem;">Autoencoder</div>
-        <div style="color: #64748b; font-size: 0.7rem;">Anomaly Detection</div>
+    <div class="model-card-3d model-card-amber">
+        <div style="font-size: 1.6rem; margin-bottom: 8px;">🔬</div>
+        <div style="color: #fcd34d; font-weight: 700; font-size: 0.85rem;">Autoencoder</div>
+        <div style="color: #64748b; font-size: 0.75rem;">Anomaly Detection</div>
     </div>
-    <div style="
-        background: rgba(16, 185, 129, 0.08);
-        border: 1px solid rgba(16, 185, 129, 0.15);
-        border-radius: 10px;
-        padding: 12px 16px;
-        text-align: center;
-    ">
-        <div style="font-size: 1.2rem; margin-bottom: 4px;">🌲</div>
-        <div style="color: #6ee7b7; font-weight: 600; font-size: 0.8rem;">Isolation Forest</div>
-        <div style="color: #64748b; font-size: 0.7rem;">Outlier Analysis</div>
+    <div class="model-card-3d model-card-success">
+        <div style="font-size: 1.6rem; margin-bottom: 8px;">🌲</div>
+        <div style="color: #6ee7b7; font-weight: 700; font-size: 0.85rem;">Isolation Forest</div>
+        <div style="color: #64748b; font-size: 0.75rem;">Outlier Analysis</div>
     </div>
 </div>
 """, unsafe_allow_html=True)

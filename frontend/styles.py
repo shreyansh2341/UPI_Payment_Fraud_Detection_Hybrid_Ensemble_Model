@@ -197,6 +197,72 @@ def get_main_css():
     .metric-card.review .metric-value { color: var(--warning-amber); }
     .metric-card.success .metric-value { color: var(--success); }
 
+    /* ── 3D Model Cards ── */
+    .model-card-3d {
+        border-radius: 12px;
+        padding: 16px;
+        text-align: center;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+    .model-card-3d::before {
+        content: '';
+        position: absolute;
+        top: 0; left: -100%; width: 50%; height: 100%;
+        background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+        transform: skewX(-25deg);
+        transition: all 0.6s ease;
+    }
+    .model-card-3d:hover {
+        transform: translateY(-8px) scale(1.02) perspective(1000px) rotateX(5deg);
+        z-index: 10;
+    }
+    .model-card-3d:hover::before {
+        left: 200%;
+    }
+    
+    .model-card-danger {
+        background: linear-gradient(145deg, rgba(239, 68, 68, 0.05), rgba(239, 68, 68, 0.15));
+        border: 1px solid rgba(239, 68, 68, 0.3);
+        box-shadow: 0 4px 15px rgba(239, 68, 68, 0.1), inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .model-card-danger:hover {
+        box-shadow: 0 15px 30px rgba(239, 68, 68, 0.25), inset 0 1px 0 rgba(255,255,255,0.2);
+        border-color: rgba(239, 68, 68, 0.6);
+    }
+    
+    .model-card-warning {
+        background: linear-gradient(145deg, rgba(249, 115, 22, 0.05), rgba(249, 115, 22, 0.15));
+        border: 1px solid rgba(249, 115, 22, 0.3);
+        box-shadow: 0 4px 15px rgba(249, 115, 22, 0.1), inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .model-card-warning:hover {
+        box-shadow: 0 15px 30px rgba(249, 115, 22, 0.25), inset 0 1px 0 rgba(255,255,255,0.2);
+        border-color: rgba(249, 115, 22, 0.6);
+    }
+    
+    .model-card-amber {
+        background: linear-gradient(145deg, rgba(245, 158, 11, 0.05), rgba(245, 158, 11, 0.15));
+        border: 1px solid rgba(245, 158, 11, 0.3);
+        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.1), inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .model-card-amber:hover {
+        box-shadow: 0 15px 30px rgba(245, 158, 11, 0.25), inset 0 1px 0 rgba(255,255,255,0.2);
+        border-color: rgba(245, 158, 11, 0.6);
+    }
+    
+    .model-card-success {
+        background: linear-gradient(145deg, rgba(16, 185, 129, 0.05), rgba(16, 185, 129, 0.15));
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.1), inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .model-card-success:hover {
+        box-shadow: 0 15px 30px rgba(16, 185, 129, 0.25), inset 0 1px 0 rgba(255,255,255,0.2);
+        border-color: rgba(16, 185, 129, 0.6);
+    }
+
     /* ── Decision Badges ── */
     .badge {
         display: inline-block;
@@ -329,21 +395,28 @@ def get_main_css():
 
     /* ── Scrollbar ── */
     ::-webkit-scrollbar {
-        width: 6px;
-        height: 6px;
+        width: 8px;
+        height: 8px;
     }
 
     ::-webkit-scrollbar-track {
-        background: var(--bg-secondary);
+        background: var(--bg-primary);
+        border-radius: 4px;
     }
 
     ::-webkit-scrollbar-thumb {
-        background: var(--text-muted);
-        border-radius: 3px;
+        background: linear-gradient(180deg, var(--accent-blue), var(--accent-purple));
+        border-radius: 4px;
+        border: 2px solid var(--bg-primary);
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        background: var(--text-secondary);
+        background: linear-gradient(180deg, var(--accent-purple), #a855f7);
+    }
+
+    /* Specific Sidebar Scrollbar */
+    section[data-testid="stSidebar"] ::-webkit-scrollbar-track {
+        background: transparent;
     }
 
     /* ── Section Headers ── */
