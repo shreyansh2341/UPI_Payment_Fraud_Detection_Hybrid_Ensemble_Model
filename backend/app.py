@@ -106,9 +106,9 @@ async def global_exception_handler(request: Request, exc: Exception):
 # ══════════════════════════════════
 @app.post("/predict", response_model=FraudResponse)
 @limiter.limit("10/minute")
-def predict_fraud(request: FraudRequest, req: Request):
+def predict_fraud(payload: FraudRequest, request: Request):
     """Legacy single-transaction prediction (V3/V4)."""
-    result = run_inference(request)
+    result = run_inference(payload)
 
     return FraudResponse(
         decision=result["decision_label"],
@@ -125,7 +125,7 @@ def predict_fraud(request: FraudRequest, req: Request):
 # ══════════════════════════════════
 @app.post("/predict/v5/batch", response_model=BatchFraudResponse)
 @limiter.limit("5/minute")
-def predict_batch_v5(request: BatchFraudRequest, req: Request):
+def predict_batch_v5(payload: BatchFraudRequest, request: Request):
     """
     V5 batch CSV processing.
     Accepts entire CSV data and returns per-transaction V5 decisions.
@@ -136,9 +136,9 @@ def predict_batch_v5(request: BatchFraudRequest, req: Request):
 
     try:
         results = run_v5_batch_inference(
-            csv_data=request.csv_data,
-            csv_columns=request.csv_columns,
-            dataset_type=request.dataset_type,
+            csv_data=payload.csv_data,
+            csv_columns=payload.csv_columns,
+            dataset_type=payload.dataset_type,
         )
     except ValueError as e:
         # Validation errors are safe to relay
@@ -155,12 +155,12 @@ def predict_batch_v5(request: BatchFraudRequest, req: Request):
 
     # Extract amounts for storage
     amount_col_idx = None
-    cols_lower = [c.lower().strip() for c in request.csv_columns]
+    cols_lower = [c.lower().strip() for c in payload.csv_columns]
     if "amount" in cols_lower:
         amount_col_idx = cols_lower.index("amount")
 
     amounts = []
-    for row in request.csv_data:
+    for row in payload.csv_data:
         if amount_col_idx is not None and amount_col_idx < len(row):
             try:
                 amounts.append(float(row[amount_col_idx]))
@@ -171,8 +171,8 @@ def predict_batch_v5(request: BatchFraudRequest, req: Request):
 
     # Persist to DB
     session_id = db.create_session(
-        filename=request.filename or "upload.csv",
-        dataset_type=request.dataset_type,
+        filename=payload.filename or "upload.csv",
+        dataset_type=payload.dataset_type,
     )
     db.store_batch_results(session_id, results, amounts)
 
@@ -219,15 +219,15 @@ def predict_batch_v5(request: BatchFraudRequest, req: Request):
 # ══════════════════════════════════
 @app.post("/analytics", response_model=AnalyticsResponse)
 @limiter.limit("30/minute")
-def get_analytics(request: AnalyticsRequest, req: Request):
+def get_analytics(payload: AnalyticsRequest, request: Request):
     """Get fraud analytics for a time window."""
-    data = db.get_analytics(days=request.days)
+    data = db.get_analytics(days=payload.days)
     return AnalyticsResponse(**data)
 
 
 @app.get("/analytics/{days}", response_model=AnalyticsResponse)
 @limiter.limit("30/minute")
-def get_analytics_by_days(req: Request, days: int = 7):
+def get_analytics_by_days(request: Request, days: int = 7):
     """Get fraud analytics for a time window (GET convenience)."""
     # Clamp days to safe range
     days = max(1, min(days, 365))
@@ -240,7 +240,7 @@ def get_analytics_by_days(req: Request, days: int = 7):
 # ══════════════════════════════════
 @app.get("/dashboard", response_model=DashboardResponse)
 @limiter.limit("30/minute")
-def get_dashboard(req: Request):
+def get_dashboard(request: Request):
     """Get dashboard summary with recent detections."""
     summary = db.get_dashboard_summary()
     recent = db.get_recent_detections(limit=50)
@@ -257,5 +257,5 @@ def get_dashboard(req: Request):
 # ══════════════════════════════════
 @app.get("/health")
 @limiter.limit("60/minute")
-def health_check(req: Request):
+def health_check(request: Request):
     return {"status": "ok", "version": "5.0", "engine": "V5 Hybrid"}
