@@ -11,6 +11,16 @@ def get_main_css():
     <style>
     /* ── Google Fonts ── */
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0');
+
+    /* ── Restore Streamlit Icons ── */
+    .material-icons, 
+    .material-symbols-rounded, 
+    [class*="icon"], 
+    [class^="stIcon"], 
+    i {
+        font-family: 'Material Symbols Rounded', 'Material Icons', sans-serif !important;
+    }
 
     /* ── Root Variables ── */
     :root {
@@ -234,7 +244,7 @@ def get_main_css():
         border-radius: var(--radius-md) !important;
         padding: 12px 32px !important;
         font-weight: 600 !important;
-        font-family: var(--font-main) !important;
+        font-family: var(--font-main);
         letter-spacing: 0.02em;
         transition: all 0.3s ease !important;
         box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3) !important;
