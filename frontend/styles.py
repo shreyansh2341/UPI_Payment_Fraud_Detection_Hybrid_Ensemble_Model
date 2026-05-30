@@ -410,6 +410,178 @@ def get_main_css():
     #MainMenu { visibility: hidden; }
     footer { visibility: hidden; }
     header[data-testid="stHeader"] { background: transparent !important; }
+
+    /* ══════════════════════════════════════
+       FIX: Streamlit Native Icon Visibility
+       Dark theme makes built-in SVG icons
+       invisible — force them to light colors.
+       ══════════════════════════════════════ */
+
+    /* ── Sidebar collapse / close button (✕ / ◀) ── */
+    button[data-testid="stSidebarCollapseButton"],
+    button[data-testid="baseButton-headerNoPadding"] {
+        color: var(--text-primary) !important;
+        opacity: 1 !important;
+    }
+
+    button[data-testid="stSidebarCollapseButton"] svg,
+    button[data-testid="baseButton-headerNoPadding"] svg,
+    section[data-testid="stSidebar"] button[kind="headerNoPadding"] svg {
+        fill: var(--text-primary) !important;
+        stroke: var(--text-primary) !important;
+        color: var(--text-primary) !important;
+        opacity: 1 !important;
+    }
+
+    /* ── Sidebar expand button (when sidebar is collapsed) ── */
+    button[data-testid="stSidebarNavCollapseButton"] svg,
+    button[data-testid="collapsedControl"] svg,
+    [data-testid="collapsedControl"] svg {
+        fill: var(--text-primary) !important;
+        stroke: var(--text-primary) !important;
+        color: var(--text-primary) !important;
+    }
+
+    [data-testid="collapsedControl"] {
+        color: var(--text-primary) !important;
+        background: var(--bg-secondary) !important;
+        border: 1px solid var(--border-glass) !important;
+    }
+
+    /* ── File uploader — upload icon, text, and browse button ── */
+    .stFileUploader svg,
+    [data-testid="stFileUploader"] svg {
+        fill: var(--accent-blue) !important;
+        stroke: var(--accent-blue) !important;
+        color: var(--accent-blue) !important;
+        opacity: 1 !important;
+    }
+
+    .stFileUploader label,
+    [data-testid="stFileUploader"] label {
+        color: var(--text-primary) !important;
+    }
+
+    .stFileUploader small,
+    [data-testid="stFileUploader"] small,
+    .stFileUploader [data-testid="stFileUploaderDropzoneInstructions"] {
+        color: var(--text-secondary) !important;
+    }
+
+    [data-testid="stFileUploaderDropzone"] {
+        background: rgba(99, 102, 241, 0.05) !important;
+        border-color: var(--border-glow) !important;
+    }
+
+    /* File uploader — delete/remove file button (✕) */
+    .stFileUploader button[aria-label="Delete file"] svg,
+    [data-testid="stFileUploader"] button svg,
+    .stFileUploader [data-testid="baseButton-minimal"] svg {
+        fill: var(--text-secondary) !important;
+        stroke: var(--text-secondary) !important;
+        color: var(--text-secondary) !important;
+    }
+
+    .stFileUploader button[aria-label="Delete file"]:hover svg,
+    .stFileUploader [data-testid="baseButton-minimal"]:hover svg {
+        fill: var(--danger) !important;
+        stroke: var(--danger) !important;
+        color: var(--danger) !important;
+    }
+
+    /* ── Expander toggle arrows ── */
+    .streamlit-expanderHeader svg,
+    [data-testid="stExpander"] summary svg,
+    [data-testid="stExpander"] [data-testid="stExpanderToggleIcon"] svg,
+    details summary svg {
+        fill: var(--text-secondary) !important;
+        stroke: var(--text-secondary) !important;
+        color: var(--text-secondary) !important;
+        opacity: 1 !important;
+    }
+
+    [data-testid="stExpander"] summary:hover svg,
+    details summary:hover svg {
+        fill: var(--accent-blue) !important;
+        stroke: var(--accent-blue) !important;
+        color: var(--accent-blue) !important;
+    }
+
+    [data-testid="stExpander"] summary,
+    .streamlit-expanderHeader {
+        color: var(--text-primary) !important;
+    }
+
+    /* ── Selectbox / dropdown arrows ── */
+    .stSelectbox svg,
+    [data-testid="stSelectbox"] svg,
+    [data-baseweb="select"] svg {
+        fill: var(--text-secondary) !important;
+        color: var(--text-secondary) !important;
+    }
+
+    [data-baseweb="select"] {
+        color: var(--text-primary) !important;
+    }
+
+    /* ── Multiselect remove-tag (✕) icons ── */
+    [data-baseweb="tag"] svg {
+        fill: var(--text-secondary) !important;
+        color: var(--text-secondary) !important;
+    }
+
+    /* ── Radio buttons & checkboxes ── */
+    .stRadio label span,
+    .stCheckbox label span {
+        color: var(--text-primary) !important;
+    }
+
+    .stRadio svg,
+    .stCheckbox svg {
+        fill: var(--accent-blue) !important;
+        color: var(--accent-blue) !important;
+    }
+
+    /* ── Number input stepper arrows ── */
+    .stNumberInput button svg,
+    [data-testid="stNumberInput"] button svg {
+        fill: var(--text-secondary) !important;
+        color: var(--text-secondary) !important;
+    }
+
+    /* ── Download button icon ── */
+    .stDownloadButton svg,
+    [data-testid="stDownloadButton"] svg {
+        fill: white !important;
+        color: white !important;
+    }
+
+    /* ── Toast / alert close buttons ── */
+    [data-testid="stNotification"] button svg,
+    .stAlert button svg {
+        fill: var(--text-secondary) !important;
+        color: var(--text-secondary) !important;
+    }
+
+    /* ── Modal / dialog close button ── */
+    [data-testid="stModal"] button svg {
+        fill: var(--text-primary) !important;
+        color: var(--text-primary) !important;
+    }
+
+    /* ── Catch-all: any SVG inside a Streamlit button ── */
+    .stApp button svg {
+        fill: currentColor;
+        color: inherit;
+        opacity: 1 !important;
+    }
+
+    /* ── Ensure sidebar nav buttons always visible ── */
+    section[data-testid="stSidebar"] button svg {
+        fill: var(--text-primary) !important;
+        stroke: var(--text-primary) !important;
+        opacity: 1 !important;
+    }
     </style>
     """
 

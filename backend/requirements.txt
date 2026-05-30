@@ -8,3 +8,4 @@ tensorflow>=2.16
 scikit-learn>=1.5
 xgboost>=2.0
 h5py>=3.10
+slowapi>=0.1.9

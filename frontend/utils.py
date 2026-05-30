@@ -4,6 +4,7 @@ utils.py — Frontend Utility Functions
 API client, chart builders, and data formatters
 for the V5 Fraud Intelligence Dashboard.
 """
+import os
 import requests
 import pandas as pd
 import plotly.graph_objects as go
@@ -13,7 +14,8 @@ import numpy as np
 
 from styles import get_plotly_theme
 
-API_BASE = "https://shreyansh2341-netra-advance-ai-to-detect-and-blo-6352edf.hf.space"
+# ── API Base URL (from environment variable, no hardcoded secrets) ──
+API_BASE = os.environ.get("NETRA_API_URL", "http://localhost:7860").rstrip("/")
 
 
 # ══════════════════════════════════

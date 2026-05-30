@@ -1,12 +1,22 @@
 """
-schemas.py — V5 Hybrid API Schemas
-═══════════════════════════════════
+schemas.py — V5 Hybrid API Schemas (Hardened)
+══════════════════════════════════════════════
 Pydantic models for request/response validation.
 Supports V5 batch processing, analytics, and history endpoints.
+
+Security: All inputs are validated with strict bounds to prevent
+resource exhaustion and abuse.
 """
-from pydantic import BaseModel, Field
+import os
+from pydantic import BaseModel, Field, field_validator
 from typing import List, Optional, Dict, Any
 from enum import Enum
+
+
+# ── Configurable Limits (via env vars) ──
+MAX_BATCH_ROWS = int(os.environ.get("NETRA_MAX_BATCH_ROWS", "50000"))
+MAX_COLUMNS = 100
+MAX_ANALYTICS_DAYS = 365
 
 
 # ── Decision Enum ──
@@ -20,14 +30,26 @@ class Decision(str, Enum):
     ERROR = "ERROR"
 
 
+# ── Dataset Type Enum (restricts valid values) ──
+class DatasetType(str, Enum):
+    PAYSIM = "paysim"
+    CREDITCARD = "creditcard"
+
+
 # ══════════════════════════════════
 # LEGACY ENDPOINTS (backward compat)
 # ══════════════════════════════════
 class FraudRequest(BaseModel):
-    transaction_type: str  # "paysim" or "creditcard"
-    tabular_features: List[float]
+    transaction_type: DatasetType  # Restricted to "paysim" or "creditcard"
+    tabular_features: List[float] = Field(
+        ..., max_length=200,
+        description="Feature values (max 200 features)"
+    )
     lstm_sequence: Optional[List[List[float]]] = None
-    model_version: str = "v3"
+    model_version: str = Field(
+        "v3", pattern=r"^v[0-9]+$",
+        description="Model version (e.g., 'v3', 'v4', 'v5')"
+    )
 
 class FraudResponse(BaseModel):
     decision: str
@@ -43,18 +65,44 @@ class FraudResponse(BaseModel):
 # ══════════════════════════════════
 class BatchFraudRequest(BaseModel):
     """Request for V5 batch CSV processing."""
-    dataset_type: str = Field(
+    dataset_type: DatasetType = Field(
         ..., description="'paysim' or 'creditcard'"
     )
     csv_data: List[List[Any]] = Field(
         ..., description="List of rows (each row is a list of values)"
     )
     csv_columns: List[str] = Field(
-        ..., description="Column names matching the CSV header"
+        ..., max_length=MAX_COLUMNS,
+        description=f"Column names matching the CSV header (max {MAX_COLUMNS})"
     )
     filename: Optional[str] = Field(
-        None, description="Original filename for tracking"
+        None, max_length=255,
+        description="Original filename for tracking"
     )
+
+    @field_validator("csv_data")
+    @classmethod
+    def validate_csv_data_size(cls, v):
+        """Reject oversized CSV payloads to prevent OOM."""
+        if len(v) > MAX_BATCH_ROWS:
+            raise ValueError(
+                f"CSV exceeds maximum row limit: {len(v)} rows "
+                f"(max {MAX_BATCH_ROWS}). Split into smaller batches."
+            )
+        if len(v) == 0:
+            raise ValueError("CSV data cannot be empty.")
+        return v
+
+    @field_validator("filename")
+    @classmethod
+    def sanitize_filename(cls, v):
+        """Strip path separators to prevent path traversal."""
+        if v is not None:
+            # Remove any path separators — only keep the basename
+            v = v.replace("/", "").replace("\\", "").replace("..", "")
+            if not v:
+                v = "upload.csv"
+        return v
 
 
 class TransactionResult(BaseModel):
@@ -90,7 +138,12 @@ class BatchFraudResponse(BaseModel):
 # ANALYTICS / HISTORY ENDPOINTS
 # ══════════════════════════════════
 class AnalyticsRequest(BaseModel):
-    days: int = Field(7, description="Time window in days (7, 30, 90, 365)")
+    days: int = Field(
+        7,
+        ge=1,
+        le=MAX_ANALYTICS_DAYS,
+        description=f"Time window in days (1–{MAX_ANALYTICS_DAYS})"
+    )
 
 
 class AnalyticsResponse(BaseModel):

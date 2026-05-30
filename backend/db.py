@@ -21,12 +21,23 @@ def _ensure_db_dir():
 
 @contextmanager
 def get_connection():
-    """Thread-safe context manager for SQLite connections."""
+    """Thread-safe context manager for SQLite connections.
+    
+    Security PRAGMAs:
+      - journal_mode=WAL:       Concurrent read/write support
+      - foreign_keys=ON:        Enforce referential integrity
+      - busy_timeout=5000:      Wait 5s on lock contention (prevent immediate failures)
+      - wal_autocheckpoint=500: Checkpoint WAL every 500 pages (~2MB) to prevent bloat
+      - max_page_count=128000:  Cap DB file at ~500MB (page_size=4096 × 128000)
+    """
     _ensure_db_dir()
     conn = sqlite3.connect(str(DB_PATH), timeout=30)
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA journal_mode=WAL")
     conn.execute("PRAGMA foreign_keys=ON")
+    conn.execute("PRAGMA busy_timeout=5000")
+    conn.execute("PRAGMA wal_autocheckpoint=500")
+    conn.execute("PRAGMA max_page_count=128000")
     try:
         yield conn
         conn.commit()
@@ -148,6 +159,8 @@ def store_batch_results(session_id: str, results: list, amounts: list = None):
 
 def get_recent_detections(limit: int = 50) -> list:
     """Get most recent detection results."""
+    # Cap limit to prevent abuse (max 500 results)
+    limit = max(1, min(limit, 500))
     with get_connection() as conn:
         rows = conn.execute(
             """SELECT d.*, s.filename, s.dataset_type as ds_type
@@ -162,6 +175,8 @@ def get_recent_detections(limit: int = 50) -> list:
 
 def get_detection_history(days: int = 7) -> list:
     """Get detection results within a time window."""
+    # Cap days to prevent scanning entire DB history
+    days = max(1, min(days, 365))
     cutoff = (datetime.utcnow() - timedelta(days=days)).isoformat()
 
     with get_connection() as conn:
@@ -178,6 +193,8 @@ def get_detection_history(days: int = 7) -> list:
 
 def get_analytics(days: int = 7) -> dict:
     """Get aggregated fraud analytics for a time window."""
+    # Cap days to prevent scanning entire DB history
+    days = max(1, min(days, 365))
     cutoff = (datetime.utcnow() - timedelta(days=days)).isoformat()
 
     with get_connection() as conn:
