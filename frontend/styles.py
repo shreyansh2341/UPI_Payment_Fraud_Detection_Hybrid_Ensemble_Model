@@ -56,7 +56,7 @@ def get_main_css():
     /* ── Global Reset ── */
     .stApp {
         background: var(--bg-primary) !important;
-        font-family: var(--font-main) !important;
+        font-family: var(--font-main);
         color: var(--text-primary) !important;
     }
 
@@ -92,7 +92,7 @@ def get_main_css():
 
     /* ── Typography ── */
     h1, h2, h3 {
-        font-family: var(--font-main) !important;
+        font-family: var(--font-main);
         color: var(--text-primary) !important;
         letter-spacing: -0.03em;
     }
@@ -101,8 +101,8 @@ def get_main_css():
     h2 { font-weight: 700 !important; }
     h3 { font-weight: 600 !important; }
 
-    p, span, div {
-        font-family: var(--font-main) !important;
+    p {
+        font-family: var(--font-main);
     }
 
     /* ── Glassmorphism Card ── */
