@@ -336,7 +336,7 @@ def _run_analysis(df: pd.DataFrame, dataset_type: str, filename: str):
             return colors.get(val, "")
 
         st.dataframe(
-            detail_df.style.applymap(color_decision_cell, subset=["Decision"]),
+            detail_df.style.map(color_decision_cell, subset=["Decision"]),
             use_container_width=True,
             height=500,
         )
@@ -349,7 +349,7 @@ def _run_analysis(df: pd.DataFrame, dataset_type: str, filename: str):
             fraud_df = detail_df[detail_df["Decision"].isin(["BLOCK", "BLOCK_NOVEL", "REVIEW"])]
             st.markdown(f"**{len(fraud_df)}** fraud/suspicious transactions found:")
             st.dataframe(
-                fraud_df.style.applymap(color_decision_cell, subset=["Decision"]),
+                fraud_df.style.map(color_decision_cell, subset=["Decision"]),
                 use_container_width=True,
                 height=400,
             )

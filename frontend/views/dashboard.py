@@ -223,7 +223,7 @@ def render_dashboard():
             return colors.get(val, "")
 
         st.dataframe(
-            display_df.style.applymap(color_decision, subset=["Decision"]),
+            display_df.style.map(color_decision, subset=["Decision"]),
             use_container_width=True,
             height=400,
         )
